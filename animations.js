@@ -3,6 +3,8 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
+// Navigation fix - v2026-07-08-2
+
 function createKeyframeAnimation(name, from, to) {
     const style = document.createElement('style');
     style.textContent = `
