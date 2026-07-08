@@ -357,9 +357,12 @@ body::after {
 .btn-primary:focus {
     background: var(--primary-dark);
     color: #fff;
-    text-shadow: 0 0 20px #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
     transform: translateY(-3px) rotate(1deg);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 107, 53, 0.6);
+    box-shadow: 
+        0 6px 20px rgba(255, 107, 53, 0.4), 
+        0 0 15px rgba(255, 107, 53, 0.6),
+        0 0 0 2px #fff;
 }
 
 .btn-primary:hover::before,
