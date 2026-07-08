@@ -499,6 +499,11 @@ body::after {
     text-shadow: 0 0 10px var(--primary-color);
 }
 
+.contact-item a {
+    color: var(--accent-color);
+    text-shadow: 0 0 5px var(--accent-color);
+}
+
 .contact__form {
     display: flex;
     flex-direction: column;
