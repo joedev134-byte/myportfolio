@@ -786,6 +786,10 @@ body::after {
    RESUME SECTION
    ============================================================ */
 
+.resume {
+    padding-top: 150px;
+}
+
 .resume__content {
     max-width: 1000px;
     margin: 0 auto;
