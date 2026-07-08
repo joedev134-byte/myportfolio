@@ -85,6 +85,9 @@ function animateButton() {
         setTimeout(() => {
             button.style.opacity = '1';
             button.style.transform = 'translateY(0)';
+            setTimeout(() => {
+                button.classList.add('pulse');
+            }, 300);
         }, 500);
     }
 }
