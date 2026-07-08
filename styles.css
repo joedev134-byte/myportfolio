@@ -237,10 +237,25 @@ body::after {
 .home {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 120px;
+}
+
+.home::before {
+    content: 'PIXEL DESIGNER PORTFOLIO';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    text-shadow: 0 0 10px var(--primary-color);
 }
 
 .home__title {
