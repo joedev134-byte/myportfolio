@@ -642,6 +642,7 @@ body::after {
     font-size: 1.5rem;
     color: var(--primary-color);
     text-shadow: 0 0 10px var(--primary-color);
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
