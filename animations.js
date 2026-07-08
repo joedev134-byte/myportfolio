@@ -122,9 +122,12 @@ function activeNavLink() {
         });
         
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
+            const href = link.getAttribute('href');
+            if (href.startsWith('#')) {
+                link.classList.remove('active');
+                if (href === `#${current}`) {
+                    link.classList.add('active');
+                }
             }
         });
     });
@@ -135,20 +138,23 @@ function addSmoothScroll() {
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
-                const targetPosition = targetSection.offsetTop - 70;
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
                 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
+                if (targetSection) {
+                    const targetPosition = targetSection.offsetTop - 70;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
             }
         });
     });
