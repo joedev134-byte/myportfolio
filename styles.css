@@ -394,8 +394,10 @@ body::after {
 .home__subtitle {
     font-size: 1.3rem;
     color: var(--text-light);
+    margin-top: 15px;
     margin-bottom: 40px;
     text-shadow: 0 0 15px var(--accent-color);
+    text-align: center;
 }
 
 /* ============================================================
