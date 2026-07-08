@@ -487,6 +487,11 @@ body::after {
     text-shadow: 0 0 20px #fff;
 }
 
+.stat:hover .stat__label,
+.stat:focus .stat__label {
+    color: #fff;
+}
+
 .stat__number {
     font-size: 2.5rem;
     font-weight: 800;
